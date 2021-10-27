@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutting Layout Generator</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="cuttinglayout.js"></script>
+    
+    <script>
+        function ready(fn){
+            if (document.readyState != 'loading'){
+                    fn();
+            }
+            else {
+                    document.addEventListener('DOMContentLoaded', fn);
+            }
+        }
+        
+        ready(function(){
+        //    alert("Hello! I am an alert box!!");
+        }
+    </script>
+</head>
+
+<body>
+    <ul class="topnav">
+        <li class="button import" id="import">Import</li>
+    </ul>
+    <div class="photo">
+        <h1>Photoshoot FW2021</h1>
+        <img src="img/photoshoot.jpg" alt="Photoshoot" class="img">
+    </div>
+</body>
+
+</html>

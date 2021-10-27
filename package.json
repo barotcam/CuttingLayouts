@@ -1,0 +1,27 @@
+{
+  "name": "cuttinglayouts",
+  "version": "1.0.0",
+  "description": "Cutting Layout Generation App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Camille",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "electron": "^15.3.0",
+    "electron-builder": "^22.13.1"
+  },
+  "build": {
+  "appId": "com.deer-and-doe.cuttinglayouts",
+  "mac": {
+    "category": "public.app-category.developer-tools"
+  }
+}
+}
