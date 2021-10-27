@@ -3,37 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cutting Layout Generator</title>
     <link rel="stylesheet" href="style.css">
     
-    <script src="cuttinglayout.js"></script>
+<!--    <script src="cuttinglayout.js"></script>
+    <script src="svgparser.js"></script>-->
     
     <script>
+                
         function ready(fn){
             if (document.readyState != 'loading'){
-                    fn();
+                fn();
             }
             else {
-                    document.addEventListener('DOMContentLoaded', fn);
+                document.addEventListener('DOMContentLoaded', fn);
             }
         }
+             
+        ready(function(){   
+            
+            const { ipcRenderer } = require( 'electron' );
+            
+            // file import
+            var importbutton = document.getElementById("import");
+            importbutton.onclick = function() {
+                ipcRenderer.send( 'open-file-dialog' );
+                console.log( '[message sent]', 'open-file-dialog' );
+            }
+            
+        });
         
-        ready(function(){
-        //    alert("Hello! I am an alert box!!");
-        }
     </script>
 </head>
 
 <body>
-    <ul class="topnav">
-        <li class="button import" id="import">Import</li>
-    </ul>
+    <div class="topnav">
+        <a href="#" class="button" id="import">Import</a>
+    </div>
     <div class="photo">
-        <h1>Photoshoot FW2021</h1>
+        <h2>Photoshoot FW2021</h2>
         <img src="img/photoshoot.jpg" alt="Photoshoot" class="img">
     </div>
+    
 </body>
 
 </html>

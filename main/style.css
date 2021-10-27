@@ -28,3 +28,27 @@ hr {
 img {
     max-width: 50vh;
 }
+
+.topnav{
+width: 100%;
+height: calc(var(--nav-width) - 0.625em);
+background-color: #fff;
+float: left;
+margin: 0;
+padding: 0;
+overflow: hidden;
+position: relative;
+z-index: 10;
+border-bottom: 2px solid #E2E8ED;
+}
+
+.button{
+float: left;
+list-style: none;
+margin: 0.78em 0 0 1.25em;
+padding: 0.6em 3em;
+color: #fff;
+background-color: #24C7ED;
+border-radius: 5em;
+font-size: 0.875em;
+}
